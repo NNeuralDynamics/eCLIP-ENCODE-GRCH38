@@ -28,7 +28,7 @@ __data/eCLIP__: contains all the eCLIP file from ENCODE
 __data/eCLIP-all__ is a placeholder for pull all replicates and merged files for the eCLIP experiments  
 __python__: code for downloading and parsing gtfs and eCLIP data  
 
-## Command to make fast file from bed file 
+## Command to make fasta file from bed file 
 
 bedtools getfasta -fi genome.fa -bed input.bed -fo output.fa
 
@@ -43,7 +43,7 @@ bedtools getfasta -fi GRCh38.primary_assembly.genome.fa -bed ENCFF227EJF_positiv
 
 ## Command to delete a directory
 
-lsof PRIESSTESS_output/.nfs2754c561ee16cb910000cee2 
+lsof PRIESSTESS_output/.nfs2754c561ee16cb910000cee2
 kill -9 <PID>
 
 
