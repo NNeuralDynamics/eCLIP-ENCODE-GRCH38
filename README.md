@@ -53,6 +53,9 @@ sed 's/T/U/g' dna_sequences.txt > rna_sequences.txt
 
 sed 's/T/U/g' ENCFF031FMO_positive.txt > ENCFF031FMO_rna_positive.txt
 
+## Command to check the number of sequences in a file ina directory 
+wc -l *_positive_rna.txt
+
 ENCFF031FMO_positive.txt
 
 # running PRIESSTESS model 
