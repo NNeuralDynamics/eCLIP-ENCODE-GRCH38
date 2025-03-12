@@ -102,6 +102,9 @@ ENCFF227EJF_positive.txt: Positive sequences extracted from BED files.
 ENCFF031FMO_rna_positive.txt: RNA sequences after T→U conversion.
 
 # running PRIESSTESS model 
+```
+PRIESSTESS -fg foreground_file -bg background_file
+```
 /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/PRIESSTESS/PRIESSTESS -fg /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/eCLIP-ENCODE-GRCH38/data/eCLIP/ENCFF031FMO_rna_positive.txt -bg /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/eCLIP-ENCODE-GRCH38/data/eCLIP/ENCFF031FMO_rna_negative.txt
 
 ## Notes
