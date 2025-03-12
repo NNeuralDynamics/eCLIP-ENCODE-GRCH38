@@ -43,43 +43,44 @@ TEXT (.txt): RNA sequences in txt format
 
 Extract sequences from the reference genome using BEDTools:
 
+```bash
 bedtools getfasta -fi genome.fa -bed input.bed -fo output.fa
-
+```
 2. Remove Chromosome Numbers and Coordinates
 
 To retain only the sequences in the FASTA file without headers:
-
+```bash
 awk '!/^>/' ENCFF002HYO_negative.fa > ENCFF002HYO_neg.fa
-
+```
 3. Convert BED to TXT Without Headers
 
 Extract sequences and remove headers:
-
+```bash
 bedtools getfasta -fi GRCh38.primary_assembly.genome.fa -bed ENCFF227EJF_positive.bed | grep -v "^>" > ENCFF227EJF_positive.txt
-
+```
 4. Delete a Directory
 
 Check and terminate processes locking a directory before deletion:
-
+```bash
 lsof PRIESSTESS_output/.nfs2754c561ee16cb910000cee2
 kill -9 <PID>
-
+```
 5. Convert DNA Sequences to RNA
 
 Replace thymine (T) with uracil (U) in sequences:
-
+```bash
 sed 's/T/U/g' dna_sequences.txt > rna_sequences.txt
-
+```
 For specific files:
-
+```bash
 sed 's/T/U/g' ENCFF031FMO_positive.txt > ENCFF031FMO_rna_positive.txt
-
+```
 6. Count the Number of Sequences in Files
 
 Check the number of sequences in multiple files within a directory:
-
+```bash
 wc -l *_positive_rna.txt
-
+```
 ## Processed Files
 
 ENCFF002HYO_neg.fa: Negative sequences without headers.
