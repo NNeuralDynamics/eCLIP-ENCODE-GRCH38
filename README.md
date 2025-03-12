@@ -50,7 +50,7 @@ This is a eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data obtained fr
 FASTQ (.fastq.gz): Raw sequencing reads before processing   
 BED (.bed): Genomic coordinates of peaks (binding sites)      
 
-## Data Preparation 
+## Data Pre processing 
 1. Extract Sequences from BED File
 
 Extract sequences from the reference genome using BEDTools:
