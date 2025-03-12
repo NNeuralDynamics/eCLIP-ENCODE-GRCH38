@@ -34,9 +34,9 @@ __python__: code for downloading and parsing gtfs and eCLIP data
 This is a eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data obtained from the ENCODE (Encyclopedia of DNA Elements) database. eCLIP is a high-throughput technique used to map RNA-binding protein (RBP) interaction sites across the transcriptome.
 
 ## File formats 
-FASTQ (.fastq.gz): Raw sequencing reads before processing
-BED (.bed): Genomic coordinates of peaks (binding sites)
-TEXT (.txt): RNA sequences in txt format
+FASTQ (.fastq.gz): Raw sequencing reads before processing   
+BED (.bed): Genomic coordinates of peaks (binding sites)   
+TEXT (.txt): RNA sequences in txt format   
 
 ## Command to make fasta file from bed file 
 
@@ -53,13 +53,13 @@ bedtools getfasta -fi GRCh38.primary_assembly.genome.fa -bed ENCFF227EJF_positiv
 
 ## Command to delete a directory
 
-lsof PRIESSTESS_output/.nfs2754c561ee16cb910000cee2
+lsof PRIESSTESS_output/.nfs2754c561ee16cb910000cee2   
 kill -9 <PID>
 
 
 ## Convert DNA to RNA 
 
-sed 's/T/U/g' dna_sequences.txt > rna_sequences.txt
+sed 's/T/U/g' dna_sequences.txt > rna_sequences.txt   
 
 sed 's/T/U/g' ENCFF031FMO_positive.txt > ENCFF031FMO_rna_positive.txt
 
