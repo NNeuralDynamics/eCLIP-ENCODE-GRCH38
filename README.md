@@ -38,35 +38,63 @@ FASTQ (.fastq.gz): Raw sequencing reads before processing
 BED (.bed): Genomic coordinates of peaks (binding sites)   
 TEXT (.txt): RNA sequences in txt format   
 
-## Command to make fasta file from bed file 
+## Data Preparation 
+1. Extract Sequences from BED File
+
+Extract sequences from the reference genome using BEDTools:
 
 bedtools getfasta -fi genome.fa -bed input.bed -fo output.fa
 
+2. Remove Chromosome Numbers and Coordinates
 
-## Command to keep only the sequence and not the chr number and coordinates
+To retain only the sequences in the FASTA file without headers:
 
 awk '!/^>/' ENCFF002HYO_negative.fa > ENCFF002HYO_neg.fa
 
-## Command to convert bed file to txt file without headers
+3. Convert BED to TXT Without Headers
+
+Extract sequences and remove headers:
 
 bedtools getfasta -fi GRCh38.primary_assembly.genome.fa -bed ENCFF227EJF_positive.bed | grep -v "^>" > ENCFF227EJF_positive.txt
 
-## Command to delete a directory
+4. Delete a Directory
 
-lsof PRIESSTESS_output/.nfs2754c561ee16cb910000cee2   
+Check and terminate processes locking a directory before deletion:
+
+lsof PRIESSTESS_output/.nfs2754c561ee16cb910000cee2
 kill -9 <PID>
 
+5. Convert DNA Sequences to RNA
 
-## Convert DNA to RNA 
+Replace thymine (T) with uracil (U) in sequences:
 
-sed 's/T/U/g' dna_sequences.txt > rna_sequences.txt   
+sed 's/T/U/g' dna_sequences.txt > rna_sequences.txt
+
+For specific files:
 
 sed 's/T/U/g' ENCFF031FMO_positive.txt > ENCFF031FMO_rna_positive.txt
 
-## Command to check the number of sequences in a file ina directory 
+6. Count the Number of Sequences in Files
+
+Check the number of sequences in multiple files within a directory:
+
 wc -l *_positive_rna.txt
 
-ENCFF031FMO_positive.txt
+## Processed Files
+
+ENCFF002HYO_neg.fa: Negative sequences without headers.
+
+ENCFF227EJF_positive.txt: Positive sequences extracted from BED files.
+
+ENCFF031FMO_rna_positive.txt: RNA sequences after T→U conversion.
 
 # running PRIESSTESS model 
 /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/PRIESSTESS/PRIESSTESS -fg /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/eCLIP-ENCODE-GRCH38/data/eCLIP/ENCFF031FMO_rna_positive.txt -bg /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/eCLIP-ENCODE-GRCH38/data/eCLIP/ENCFF031FMO_rna_negative.txt
+
+## Notes
+
+Ensure that the reference genome (genome.fa or GRCh38.primary_assembly.genome.fa) is correctly indexed before running bedtools getfasta.
+
+The kill -9 command should be used cautiously to terminate processes.
+
+Confirm sequence integrity after sed modifications before proceeding with PRIESSTESS.
