@@ -30,6 +30,18 @@ __python__: code for downloading and parsing gtfs and eCLIP data
 
 ## Overview
 
+## Requirements
+
+RNAfold (PRIESSTESS was developed with version 2.4.11)
+
+STREME (PRIESSTESS was developed with version 5.3.0)
+
+python3 (PRIESSTESS was developed with version 3.8)
+
+sklearn (PRIESSTESS was developed with version 0.23.2)
+
+skopt python package (PRIESSTESS was developed with version 0.8.1)
+
 ## About the dataset
 This is a eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data obtained from the ENCODE (Encyclopedia of DNA Elements) database. eCLIP is a high-throughput technique used to map RNA-binding protein (RBP) interaction sites across the transcriptome.
 
