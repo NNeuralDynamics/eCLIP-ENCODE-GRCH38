@@ -29,6 +29,7 @@ __data/eCLIP-all__ is a placeholder for pull all replicates and merged files for
 __python__: code for downloading and parsing gtfs and eCLIP data  
 
 ## Overview
+This repository provides a step-by-step guide for processing eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data from the ENCODE database and running the PRIESSTESS model for RNA-binding protein (RBP) motif identification.
 
 ## Requirements
 
