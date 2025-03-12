@@ -47,8 +47,7 @@ This is a eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data obtained fr
 
 ## File formats 
 FASTQ (.fastq.gz): Raw sequencing reads before processing   
-BED (.bed): Genomic coordinates of peaks (binding sites)   
-TEXT (.txt): RNA sequences in txt format   
+BED (.bed): Genomic coordinates of peaks (binding sites)      
 
 ## Data Preparation 
 1. Extract Sequences from BED File
