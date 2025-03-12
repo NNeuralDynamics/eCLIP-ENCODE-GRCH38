@@ -28,6 +28,16 @@ __data/eCLIP__: contains all the eCLIP file from ENCODE
 __data/eCLIP-all__ is a placeholder for pull all replicates and merged files for the eCLIP experiments  
 __python__: code for downloading and parsing gtfs and eCLIP data  
 
+## Overview
+
+## About the dataset
+This is a eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data obtained from the ENCODE (Encyclopedia of DNA Elements) database. eCLIP is a high-throughput technique used to map RNA-binding protein (RBP) interaction sites across the transcriptome.
+
+## File formats 
+FASTQ (.fastq.gz): Raw sequencing reads before processing
+BED (.bed): Genomic coordinates of peaks (binding sites)
+TEXT (.txt): RNA sequences in txt format
+
 ## Command to make fasta file from bed file 
 
 bedtools getfasta -fi genome.fa -bed input.bed -fo output.fa
