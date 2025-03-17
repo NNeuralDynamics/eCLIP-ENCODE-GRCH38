@@ -51,6 +51,9 @@ FASTQ (.fastq.gz): Raw sequencing reads before processing
 BED (.bed): Genomic coordinates of peaks (binding sites)      
 
 ## Data Pre processing 
+Convert the bed files into positive and negative sets where the positive set contains high-scoring regions. The negative set has similar regions but shifted away, which can be used as a control.
+Script for it is it bash scripts folder 
+
 1. Extract Sequences from BED File
 
 Extract sequences from the reference genome using BEDTools:
