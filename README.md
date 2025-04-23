@@ -44,7 +44,7 @@ sklearn (PRIESSTESS was developed with version 0.23.2)
 skopt python package (PRIESSTESS was developed with version 0.8.1)
 
 ## About the dataset
-This is a eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data obtained from the ENCODE (Encyclopedia of DNA Elements) database. eCLIP is a high-throughput technique used to map RNA-binding protein (RBP) interaction sites across the transcriptome.
+This is a eCLIP (enhanced CrossLinking and ImmunoPrecipitation) data obtained from the ENCODE (Encyclopedia of DNA Elements) database. eCLIP is a high-throughput technique used to map RNA-binding protein (RBP) interaction sites across the transcriptome. The current dataset focuses on K562 and HepG2 celllines. 
 
 ## File formats 
 FASTQ (.fastq.gz): Raw sequencing reads before processing   
