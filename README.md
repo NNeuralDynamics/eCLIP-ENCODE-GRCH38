@@ -110,6 +110,17 @@ PRIESSTESS -fg foreground_file -bg background_file
 ```
 /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/PRIESSTESS/PRIESSTESS -fg /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/eCLIP-ENCODE-GRCH38/data/eCLIP/ENCFF031FMO_rna_positive.txt -bg /work/talisman/smuthyala/motif_identification/PRIESSTESS_for_eClip/eCLIP-ENCODE-GRCH38/data/eCLIP/ENCFF031FMO_rna_negative.txt
 
+# PRIESSTESS Output structure 
+PRIESSTESS Output Package
+
+Contents:
+- motifs/: Contains discovered motifs in MEME format.
+- performance/: AUC, ROC, and accuracy metrics for model evaluation.
+- sequences/: Binding site predictions in BED/FASTA format.
+- visualizations/: Motif logos and other plots.
+- model/: Trained model weights.
+- logs/: Run logs and parameters.
+
 ## Notes
 
 Ensure that the reference genome (genome.fa or GRCh38.primary_assembly.genome.fa) is correctly indexed before running bedtools getfasta.
